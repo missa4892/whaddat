@@ -6,6 +6,7 @@ var fs = require('fs');
 
 const helper = require('../helperAPI.js');
 
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -44,7 +45,7 @@ app.use(express.static('ProfileResources'));
 
 //app.listen(3000);
 
-var server =http.createServer(app).listen(3000, function(){
+var server =http.createServer(app).listen(port, function(){
   console.log("Server up");
 });
 //Server listens on the port 3000
